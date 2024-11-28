@@ -1,0 +1,375 @@
+{
+	"info": {
+		"_postman_id": "19ddfd79-932d-4398-8e98-d92fb4764b5f",
+		"name": "TaskManagementAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31314194"
+	},
+	"item": [
+		{
+			"name": "Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"email\": \"debu@gmail.com\",\r\n      \"firstName\": \"Debu\",\r\n      \"lastName\": \"Das\",\r\n       \"mobile\": \"01798237736\",\r\n       \"password\": \"1927\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/Registration",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateTask",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRlc2hhZGFzNzk5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiI2NzQ0MTM2NjFlMjczNDhhZTE0Y2MwNTQiLCJpYXQiOjE3MzI3MzA5ODEsImV4cCI6MTczNTMyMjk4MX0.JIt6iW3DKFafza2rzTf6Ilc9ln1t1apkQbKsL-dJ0rg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"mustdo\",\r\n    \"description\":\"need to submit as early as possible\",\r\n    \"status\":\"completed\"\r\n        \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/CreateTask",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"CreateTask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateStatus",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRlYnVAZ21haWwuY29tIiwiaWF0IjoxNzMyNTQ2OTQ2LCJleHAiOjE3MzUxMzg5NDZ9.bx8LvNJd4XgGkhLJwAjqHloX5uEKB8JC3cqmUY2Kn2I",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/UpdateStatus/finished ",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"UpdateStatus",
+						"finished "
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TaskListByStatus",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRlc2hhZGFzNzk5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiI2NzQ0MTM2NjFlMjczNDhhZTE0Y2MwNTQiLCJpYXQiOjE3MzI3MzA5ODEsImV4cCI6MTczNTMyMjk4MX0.JIt6iW3DKFafza2rzTf6Ilc9ln1t1apkQbKsL-dJ0rg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/TaskListByStatus/pending",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"TaskListByStatus",
+						"pending"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteTask",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRlYnVAZ21haWwuY29tIiwiaWF0IjoxNzMyNTQ2OTQ2LCJleHAiOjE3MzUxMzg5NDZ9.bx8LvNJd4XgGkhLJwAjqHloX5uEKB8JC3cqmUY2Kn2I",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/DeleteTask",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"DeleteTask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"email\": \"deshadas799@gmail.com\",\r\n       \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/Login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ProfileDetails",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRlYnVAZ21haWwuY29tIiwiaWF0IjoxNzMyNzI3ODY2LCJleHAiOjE3MzUzMTk4NjZ9.eEyJ8TTLrAJxENXd6igS88A46m7JFJiadHdUiw-kq8U",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/ProfileDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"ProfileDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ProfileUpdate",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRlYnVAZ21haWwuY29tIiwiaWF0IjoxNzMyNTQ2OTQ2LCJleHAiOjE3MzUxMzg5NDZ9.bx8LvNJd4XgGkhLJwAjqHloX5uEKB8JC3cqmUY2Kn2I",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Debasree\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/ProfileUpdate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"ProfileUpdate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EmailVerify",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRlYnVAZ21haWwuY29tIiwiaWF0IjoxNzMyNTQ2OTQ2LCJleHAiOjE3MzUxMzg5NDZ9.bx8LvNJd4XgGkhLJwAjqHloX5uEKB8JC3cqmUY2Kn2I",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/EmailVerify/debu@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"EmailVerify",
+						"debu@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OtpVerify",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRlYnVAZ21haWwuY29tIiwiaWF0IjoxNzMyNTQ2OTQ2LCJleHAiOjE3MzUxMzg5NDZ9.bx8LvNJd4XgGkhLJwAjqHloX5uEKB8JC3cqmUY2Kn2I",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/CodeVerify/debu@gmail.com/107670",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"CodeVerify",
+						"debu@gmail.com",
+						"107670"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ResetPassword",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRlYnVAZ21haWwuY29tIiwiaWF0IjoxNzMyNTQ2OTQ2LCJleHAiOjE3MzUxMzg5NDZ9.bx8LvNJd4XgGkhLJwAjqHloX5uEKB8JC3cqmUY2Kn2I",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\" : \"debu\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/ResetPassword",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"ResetPassword"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BaseURL",
+			"value": "https://localhost:5000/api",
+			"type": "string"
+		}
+	]
+}
